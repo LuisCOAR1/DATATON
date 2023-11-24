@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Maps</title>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title>Maps de la portada</title>
+	<link rel="stylesheet" type="text/css" href="secondary/estilo.css">
+	<meta charset="UTF-8">
+    <meta http-equiv="language" content="es">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COAR</title>
+    <link rel="stylesheet" href="secondary/normalize.css">
+    <link rel="icon" type="img/jpg" href="img/Logo_Coar.jpg">
+    <link rel="icon" href="img/Logo_Coar.ico">
 </head>
 <body>
-	<div id="map"></div>
+	<header class="navigation">
+		<div class="logo">
+			<img src="img/Logo_Coar.jpg" alt="Logo_Coar">
+			<h1>COAR CUSCO</h1>
+		</div>
+		<ul class="links">
+			<a class="link__element" href="#principal">Inicio</a>
+			<a class="link__element" href="#aboutus">Sobre nosotros</a>
+			<a class="link__element" href="#gallery">Profesores </a>
+		</ul>
+</header>
+<main class="principal" id="principal">
+	<section class="map">
+		<div id="map"></div>
+	</section>
+	<section class="banner">
+		<input type="radio" name="banner" id="slideOne" checked>
+		<input type="radio" name="banner" id="slideTwo">
+		<input type="radio" name="banner" id="slideThree">
+		<input type="radio" name="banner" id="slideFour">
+		<div class="buttons">
+			<label for="slideOne"></label>
+			<label for="slideTwo"></label>
+			<label for="slideThree"></label>
+			<label for="slideFour"></label>
+		</div>
+		<div class="sliders">
+			<div class="firstSlide"></div>
+			<div class="secondSlide"></div>
+			<div class="thirdSlide"></div>
+			<div class="fourthSlide"></div>
+		</div>
+	</section>
+</main>
+
 <script src="script.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 </body>
