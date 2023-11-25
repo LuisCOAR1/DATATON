@@ -107,6 +107,7 @@
 }
 /*Carta de informacion*/
 .card {
+    margin: 10px;
     position: relative;
     width: 300px;
     height: 400px;
@@ -120,7 +121,7 @@
     background: linear-gradient(transparent 80%, #000), var(--i);
     background-position: center;
     background-size: cover;
-    z-index: 100;
+    z-index: 9;
 }
 
 .card .card_landing h6 {
@@ -142,7 +143,7 @@
     margin: auto;
     padding: 15px;
     background: #fff;
-    z-index: 90;
+    z-index: 1;
     box-shadow: 0 5px 10px #000;
     transition: .5s;
 }
@@ -204,4 +205,7 @@
     background: #bc8811;
     display: block;
     margin-top: 10px;
+}
+.bloque {
+    display: none;
 }
