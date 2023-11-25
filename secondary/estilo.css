@@ -1,43 +1,43 @@
-#map {
-	height: 80vh;
-	width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color: rgb(0, 0, 0);
 }
 .navigation{
     position: sticky;
     top: 0;
     left: 0;
-    background-color: rgb(242, 242, 242);
-    z-index: 10;
+    background-color: var(--color);
+    z-index: 100;
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-around;
     align-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .logo{
     display: flex;
     align-items: center;
 }
 .logo img{
-    height: 60px;
+    height: 50%;
     margin-right: 1.5em;
 }
 .logo h1{
-    display: inline;
     font-weight: bolder;
 }
 .links{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     align-content: center;
     justify-items: center;
 }
 .link__element{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
+    font: 400 1em 'Roboto', sans-serif;
     position: relative;
-    display: block;
     padding: 5px 10px;
     text-decoration: none;
     color: #000000;
@@ -64,7 +64,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #4c0000;
+        background-color: #000000;
         transform: scale(0);
         opacity: 0;
         transition: .3s;
@@ -81,6 +81,20 @@
         opacity: 1;
         }
     }
+}
+#map {
+	height: calc(100vh - 100px);
+	width: 100%;
+}
+.map h2{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: red;
+    display: block;
+    position: absolute;
+    z-index: 90;
+    bottom: 0;
+    left: 50%;
 }
 /*Contenido ultimos casos de corrupcion en tu zona*/
 .region{
@@ -104,6 +118,37 @@
 }
 .region__new{
     padding: 100px;
+}
+/*Information cards*/
+.information{
+    background-image: url("../img/information_background.jpg");
+    width: 100%;
+    background-size: cover;
+}
+.information__content h2{
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 1em;
+    border-bottom: 2px solid var(--color)
+}
+.information__request{
+    width: 90%;
+    margin: 1em auto;
+}
+.information__request button{
+    color: #fff;
+    margin-right: 1em;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #00000000;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    transition: .3s;
+}
+.information__request button:hover{
+    color: #000000;
+    border: 1px solid #000;
 }
 /*Carta de informacion*/
 .card {
@@ -195,7 +240,6 @@
     font-size: 14px;
     margin-bottom: 5px;
 }
-
 .card_info .action .btn {
     padding: 10px;
     color: #fff;
@@ -206,6 +250,6 @@
     display: block;
     margin-top: 10px;
 }
-.bloque {
+.corruption__card{
     display: none;
 }
