@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 :root{
-    --color: rgb(0, 0, 0);
+    --color: rgb(225, 225, 225);
 }
 .navigation{
     position: sticky;
@@ -82,46 +82,108 @@
         }
     }
 }
+/*Banner*/
+.banner{
+    height: calc(100vh - 100px);
+    width: auto;
+    overflow: hidden;
+}
+.banner input{
+    display: none;
+    visibility: hidden;
+}
+.buttons{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+    gap: 10px;
+}
+.buttons label{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(17, 0, 255);
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 30;
+    transition: 200ms ease-in-out;
+}
+.buttons label:hover{
+    scale: 1.2;
+    opacity: 1;
+}
+.banner input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.banner input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.banner input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.banner input:nth-child(4):checked ~ .buttons label:nth-child(4){
+    opacity: 1;
+    scroll-margin: 2;
+    width: 40px;
+}
+.sliders{
+    height: 100%;
+    position: relative;
+    width: 400%;
+    display: flex;
+    transition: 400ms ease-in-out;
+    overflow: hidden;
+}
+.sliders > div{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.firstSlide, .secondSlide, .thirdSlide,.fourthSlide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .9;
+}
+.sliders::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(164, 201, 201, 0.575);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.firstSlide{
+    background-image: url(../img/Banner/banner.jpg);
+}
+.secondSlide{
+    background-image: url(../img/Banner/banner2.jpg);
+}
+.thirdSlide{
+    background-image: url(../img/Banner/banner3.jpg);
+}
+.fourthSlide{
+    background-image: url(../img/Banner/banner4.jpg);
+}
+.banner input:nth-child(1):checked ~ .sliders{
+    left: 0;
+}
+.banner input:nth-child(2):checked ~ .sliders{
+    left: -100%;
+}
+.banner input:nth-child(3):checked ~ .sliders{
+    left: -200%;
+}
+.banner input:nth-child(4):checked ~ .sliders{
+    left: -300%;
+}
 #map {
 	height: calc(100vh - 100px);
 	width: 100%;
 }
-.map h2{
-    border-radius: 10px;
-    padding: 10px;
-    background-color: red;
-    display: block;
-    position: absolute;
-    z-index: 90;
-    bottom: 0;
-    left: 50%;
-}
-/*Contenido ultimos casos de corrupcion en tu zona*/
-.region{
-    width: 100%;
-    background-color: #ffd6d6;
-    border-width: 2px 0;
-    border-style: solid;
-    border-color: #000;
-}
-.region h2{
-    text-align: center;
-}
-.region article{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-}
-.region article iframe{
-    border-radius: 10px;
-}
-.region__new{
-    padding: 100px;
-}
 /*Information cards*/
 .information{
     background-image: url("../img/information_background.jpg");
+    height: auto;
     width: 100%;
     background-size: cover;
 }
@@ -133,27 +195,41 @@
     border-bottom: 2px solid var(--color)
 }
 .information__request{
+    display: flex;
     width: 90%;
     margin: 1em auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.information__request::-webkit-scrollbar{
+    width: 12px;
+}
+.information__request::-webkit-scrollbar-thumb {
+    height: 5px;
+    background-color: rgb(246, 184, 70);
+    border-radius: 10px;
 }
 .information__request button{
-    color: #fff;
+    display: inline-block;
+    height: 3em;
+    color: #000000;
     margin-right: 1em;
+    margin-bottom: .5em;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
     background-color: #00000000;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     border-radius: 30px;
-    transition: .3s;
+    transition: .2s;
 }
 .information__request button:hover{
-    color: #000000;
-    border: 1px solid #000;
+    background-color: rgb(255, 162, 0);
+    border: none;
+    font-weight: bold;
+    box-sizing: border-box;
 }
 /*Carta de informacion*/
-.corruption__card{
-    background-color: red;
-    height: 100vh;
+.corruption__section{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -163,48 +239,70 @@
 .card{
     height: 400px;
     width: 350px;
-    margin: 10px;
+    margin: 2.5em;
+    transition: 300ms;
+    background-color: rgb(250, 168, 3);
+    border-radius: 20px;
     transition: 300ms;
 }
-.info{
-    height: 400px;
+.card__image{
+    height: 200px;
     width: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    border-radius: 10px;
-    transition: 300ms;
-    position: absolute;
+    background-image: url(../img/card2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(5px -10px 20px #ffffff);
+    border: none;
 }
-.info__image{
-    height: 400px;
-    width: 200px;
-    background-image: url(../img/card1.jpeg);
-    background-size: cover;
-    margin-bottom: 200px;
-    filter: drop-shadow(5px -4px 10px #fff);
+.card__text{
+    position: relative;
+    z-index: 30;
+    border-radius: 0 0 20px 20px;
+    color: #fff;
+    background: rgba(48, 88, 117, 0.753);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
-.info__text{
-    width: 350px;
-    height: 300px;
-    background-color: antiquewhite;
-    position: absolute;
-    border-radius: 0 0 10px 10px;
-    bottom: 0%;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    transition: 300ms;
+.card__text h2{
+    margin: 0 ;
+    padding: 15px;
 }
-.card:hover .info__image{
-    transform: translateY(-40px);
+.card__text p{
+    padding: 10px;
+}
+.card__text a {
+    font-weight: bold;
+    border-radius: 0 0 20px 20px;
+    background-color: #000;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.card:hover .card__image{
+    transform: translateY(20px);
     transition: 300ms;
     filter: none;
-    background-image: url(../img/information_background.jpg);
+    background-image: url(../img/card2.png);
 }
 .card:hover{
     transform: scale(1.1);
 }
-.card:hover .info{
-    background: radial-gradient(white, rgb(0, 0, 0));
+/*Information Region*/
+.region{
+    width: 100%;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 100px;
+}
+.region *{
+    background-color: red;
 }

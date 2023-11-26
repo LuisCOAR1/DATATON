@@ -25,108 +25,265 @@
 		</ul>
 	</header>
 	<main class="principal" id="principal">
-		<section class="map">
-			<h2>Zona Actual : Cusco <i class="fa-regular fa-clock"></i> </h2>
-			<div id="map"></div>
-		</section>
-
-		<section class="region">
-			<h2>Casos de corrupcion</h2>
-			<article class="region__new">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/VsUGQehGoGQ?si=M2tNR09B93w319ME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<div class="region__text">
-					<h1>De que trata la corrupcion</h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis minima tenetur voluptatum dolorum eaque fugiat at iusto perferendis vel beatae, facilis, similique magni ad, voluptate odio ratione praesentium. Ullam.</p>
-				</div>
-			</article>
-			<article class="region__new">
-				<div class="region__text">
-					<h1>De que trata la corrupcion</h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis minima tenetur voluptatum dolorum eaque fugiat at iusto perferendis vel beatae, facilis, similique magni ad, voluptate odio ratione praesentium. Ullam.</p>
-				</div>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/VsUGQehGoGQ?si=M2tNR09B93w319ME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			</article>
-			<article class="region__new">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/VsUGQehGoGQ?si=M2tNR09B93w319ME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<div class="region__text">
-					<h1>De que trata la corrupcion</h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis minima tenetur voluptatum dolorum eaque fugiat at iusto perferendis vel beatae, facilis, similique magni ad, voluptate odio ratione praesentium. Ullam.</p>
-				</div>
-			</article>
-		</section>
-
+		<section class="banner">
+            <input type="radio" name="banner" id="slideOne" checked>
+            <input type="radio" name="banner" id="slideTwo">
+            <input type="radio" name="banner" id="slideThree">
+            <input type="radio" name="banner" id="slideFour">
+            <div class="buttons">
+                <label for="slideOne"></label>
+                <label for="slideTwo"></label>
+                <label for="slideThree"></label>
+                <label for="slideFour"></label>
+            </div>
+            <div class="sliders">
+				<section class="firstSlide">
+					<div id="map"></div>
+				</section>
+                <div class="secondSlide"></div>
+                <div class="thirdSlide"></div>
+                <div class="fourthSlide"></div>
+            </div>
+        </section>
 		<section class="information">
 			<article class="information__content">
 				<h2><i class="fa-solid fa-tree"></i> La informacion de tu zona</i></h2>
 				<div class="information__request">
 					<!-- Botones de informacion mostrar -->
-					<button id="show_public">Sector publico</button>
-					<button id="mostrarBoton">Mostrar Bloque</button>
-					<button id="mostrarBoton">Mostrar Bloque</button>
-					<button id="mostrarBoton">Mostrar Bloque</button>
-					<button id="ocultarBoton">Ocultar Bloque</button>
-					<button id="mostrarBoton">Mostrar Bloque</button>
-					<button id="mostrarBoton">Mostrar Bloque</button>
-					<button id="mostrarBoton">Mostrar Bloque</button>
-					<button id="ocultarBoton">Ocultar Bloque</button>
+					<button id="public_sector">Sector publico</button>
+					<button id="juridic_sector">Sector Juridico</button>
+					<button id="education_sector">Sector educacion</button>
+					<button id="salud_sector">Sector Salud</button>
+					<button href="#">Niños</button> 
+					<!-- Oscar si estas en el codigo esta es la zona de niños se tiene que hacer una seccion especial con juegos en JS -->
 				</div>
 			</article>
-			<article id="public_sector" class="corruption__card">
-				<div class="card">
-					<div class="info">
-						<img class="info__image" alt="">
-						<div class="info__text">
-							<h2>Colusion</h2>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
-							<div class="button"><h6>Leer Mas</h6></div>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="info">
-						<img class="info__image" alt="">
-						<div class="info__text">
-							<h2>Colusion</h2>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
-							<div class="button"><h6>Leer Mas</h6></div>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="info">
-						<img class="info__image" alt="">
-						<div class="info__text">
-							<h2>Colusion</h2>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
-							<div class="button"><h6>Leer Mas</h6></div>
-						</div>
-					</div>
-				</div>
-			</article>
-		
-			<div id="bloque2" class="bloque">
-				Contenido del Bloque 2
-			</div>
-		
-			<script>
-				// Obtener referencias a los botones y bloques por su ID
-				var mostrarBoton = document.getElementById("show_public");
-				var ocultarBoton = document.getElementById("ocultarBoton");
-				var bloque1 = document.getElementById("public_sector");
-				var bloque2 = document.getElementById("bloque2");
-		
-				// Funciones de acción para mostrar/ocultar bloques
-				function mostrarBloque() {
-					bloque1.style.display = "block";
-					bloque2.style.display = "block";
-				}
-		
-				// Asignar las funciones de acción a los eventos de clic
-				mostrarBoton.addEventListener("click", mostrarBloque);
-				ocultarBoton.addEventListener("click", ocultarBloque);
-			</script>
 
+			<article class="corruption__section" id="bloque1">					
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="corruption__section" id="bloque2">					
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="corruption__section" id="bloque3">					
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="corruption__section" id="bloque4">					
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__image"></div>
+					<div class="card__text">
+						<h2>Colusion</h2>
+					    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos rem minima exercitationem ipsam quod provident odio, nihil sunt alias porro iure debitis vitae sint amet laborum vero nesciunt officiis? Eaque.</p>
+					    <a href="">Averigualo</a>
+					</div>
+				</div>
+			</article>
 		</section>
+
+		<section class="region">
+				<img src="img/region__example.png">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/VsUGQehGoGQ?si=M2tNR09B93w319ME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<div class="region__text">
+					<h1>De que trata la corrupcion</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis minima tenetur voluptatum dolorum eaque fugiat at iusto perferendis vel beatae, facilis, similique magni ad, voluptate odio ratione praesentium. Ullam.</p>
+				</div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/VsUGQehGoGQ?si=M2tNR09B93w319ME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<div class="region__text">
+					<h1>De que trata la corrupcion</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis minima tenetur voluptatum dolorum eaque fugiat at iusto perferendis vel beatae, facilis, similique magni ad, voluptate odio ratione praesentium. Ullam.</p>
+				</div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/VsUGQehGoGQ?si=M2tNR09B93w319ME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<div class="region__text">
+					<h1>De que trata la corrupcion</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis minima tenetur voluptatum dolorum eaque fugiat at iusto perferendis vel beatae, facilis, similique magni ad, voluptate odio ratione praesentium. Ullam.</p>
+				</div>
+		</section>
+
+		
 		</section>
 	</main>
 
