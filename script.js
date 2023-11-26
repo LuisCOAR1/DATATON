@@ -51,3 +51,9 @@ publicSectorBtn.addEventListener("click", mostrarBloque1);
 juridicSectorBtn.addEventListener("click", mostrarBloque2);
 educationSectorBtn.addEventListener("click", mostrarBloque3);
 saludSectorBtn.addEventListener("click", mostrarBloque4);
+
+const chk = document.getElementById('chk')
+
+chk.addEventListener('change', () => {
+  document.body.classList.toggle('dark')
+})
