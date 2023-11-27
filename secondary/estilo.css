@@ -7,10 +7,11 @@
     padding: 0;
 }
 :root{
-    --color: rgba(225, 225, 225, 0.781);
+    --color: rgb(0, 0, 0);
     --colorneg: rgb(0, 0, 0);
 }
 .navigation{
+    color: #fff;
     position: sticky;
     top: 0;
     left: 0;
@@ -46,7 +47,7 @@
     position: relative;
     padding: 5px 10px;
     text-decoration: none;
-    color: #000000;
+    color: #fff;
     font-size: 1.3em;
     transition: .2s;
     &:before {
@@ -97,7 +98,7 @@ body.dark {
     position: absolute;
 }
 .checkbox__label {
-    background-color: #111;
+    background-color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -109,7 +110,7 @@ body.dark {
     transform: scale(1.5);
 }
 .checkbox__label .ball {
-    background-color: #fff;
+    background-color: #000000;
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -226,13 +227,13 @@ body.dark {
 	height: calc(100vh - 100px);
 	width: 100%;
 }
-/*Information cards*/
+/*   cards*/
 .information{
-    background-color: rgba(255, 20, 20, 0.7);
-    background-image: url("../img/information_background.jpg");
+    background-color: rgba(255, 255, 255, 0);
     height: auto;
     width: 100%;
     background-size: cover;
+    margin-bottom: 5em;
 }
 .information__content h2{
     font-size: 2em;
@@ -278,16 +279,13 @@ body.dark {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 .card{
     background-color: #c13a2b99;
     min-width: 200px;
     height: 400px;
     width: 350px;
-    margin: 3em;
     transition: 300ms;
-    border-radius: 20px;
     transition: 300ms;
 }
 .card__image{
@@ -318,7 +316,6 @@ body.dark {
 }
 .card__text a {
     font-weight: bold;
-    border-radius: 0 0 20px 20px;
     background-color: #000;
     padding: 10px;
     text-decoration: none;
@@ -335,12 +332,13 @@ body.dark {
 }
 .card:hover{
     transform: scale(1.1);
-    background: -webkit-radial-gradient(circle, #ffffff 0%, #50f17b65 100%);
-    background: radial-gradient(circle, #ffffff 0%, #50f17b5f 100%);
+    background: -webkit-radial-gradient(circle, #ffffff 0%, #50f17b 100%);
+    background: radial-gradient(circle, #ffffff 0%, #50f17b 100%);
+    z-index: 120;
 }
 /*Information Region*/
 .region{
-    background:linear-gradient(45deg, blueviolet, lightgreen);
+    background-color: rgb(250, 202, 91);
     padding:15px 9%;
     padding-bottom: 100px;
 }
@@ -348,7 +346,7 @@ body.dark {
 .region .heading{
     text-align: center;
     padding-bottom: 15px;
-    color:#fff;
+    color:#000000;
     text-shadow: 0 5px 10px rgba(0,0,0,.2);
     font-size: 50px;
 }
@@ -406,13 +404,16 @@ body.dark {
     height: auto;
 }
 .fuentes{
-    background-image: linear-gradient(180deg, #f990ff 0, #a974ff 25%, #5353f2 50%, #0033b2 75%, #001979 100%);
+    background-color:#59e90000;
 }
-.fuentes h1{
-    padding-top: 3em;
+.region h1{
+    padding-top: 1em;
 }
 svg{
     position: absolute;
+}
+.fuentes .box-region .box{
+    background-color: rgb(250, 202, 91);
 }
 @media (max-width:768px){
     .region{
@@ -423,5 +424,8 @@ svg{
     }
     .link__element{
         font-size: 1em;
+    }
+    .card{
+        margin: 1.5em 0;
     }
 }
