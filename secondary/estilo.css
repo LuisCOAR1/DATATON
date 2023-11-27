@@ -418,4 +418,10 @@ svg{
     .region{
         padding:20px;
     }
+    .logo{
+        display: none;
+    }
+    .link__element{
+        font-size: 1em;
+    }
 }
